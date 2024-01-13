@@ -29,6 +29,8 @@ The objective of this project is to deploy a Language Model (LLM) on consumer ed
 
 ## Approach
 
+![Alt text](img\ModelCompressionPipeline.jpg)
+
 1. **Inference on Llama 7B and Mistral 7B:**
    - Run inference and validate performance for storytelling, summarization, and math Q&A tasks.
 
