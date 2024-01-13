@@ -1,6 +1,6 @@
 # Edge LLM - Reducing LLM Memory Footprint to < 2GB
 
-This project is the Engineering Entrepreneurial Capstone at the University of Washington Electrical and Computer Engineering Department, sponsored by Amazon.
+This project is the Engineering Entrepreneurial Capstone at the University of Washington, sponsored by Amazon.
 
 ## Project Team
 
