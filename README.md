@@ -48,6 +48,30 @@ The objective of this project is to deploy a Language Model (LLM) on consumer ed
 ## How to Use
 
 
+### Using HTTP-server with self-designed user interface
+
+1. Using 'make' to create binary in llama.cpp: 
+
+   `make server`
+
+2. Start a server that by default listens on 127.0.0.1:8080: 
+
+   `./server -m models/7B/ggml-model.gguf -c 2048`
+
+3. Consume the endpoints with Postman or NodeJS: 
+
+```
+   url = "http://127.0.0.1:8080/completion"
+
+   data = {
+      "prompt": "What is the capital of spain?",
+      "n_predict": 256,  # Set the maximum number of tokens to predict to 64
+   }
+
+   # Send the POST request
+   response = requests.post(url, json=data)
+```
+
 
 ## License
 
