@@ -45,37 +45,23 @@ The objective of this project is to deploy a Language Model (LLM) on consumer ed
 4. **Model Serialization and Compilation:**
    - Serialize the model and compile it to run inference on Orange Pi using SDKs such as Open CL and RKNN.
 
-## How to Use
+## How to use this branch
 
+This branch consists of the following folders:
+1. datasets
+   - Open Assistant English only dataset (train and test)
+   - MedQuad dataset (train and test)
 
-### Using HTTP-server with self-designed user interface
-
-1. Using 'make' to create binary in llama.cpp: 
-
-   `make server`
-
-2. Start a server that by default listens on 127.0.0.1:8080: 
-
-   `./server -m models/7B/ggml-model.gguf -c 2048`
-
-3. Consume the endpoints with Postman or NodeJS: 
-
-```
-   url = "http://127.0.0.1:8080/completion"
-
-   data = {
-      "prompt": "What is the capital of spain?",
-      "n_predict": 256,  # Set the maximum number of tokens to predict to 64
-   }
-
-   # Send the POST request
-   response = requests.post(url, json=data)
-```
-
+2. src
+   - dataset_sampling
+      - oasst_sampling.ipynb : Please use this script to sample subset of datasets from open assistant or medquad
+   - finetuning
+      - Multiple fine-tuning scripts have been provided which are customized to each model (LLaMA2, LLaMA3, Gemma-2b). Feel free
+      to run any script based on the dataset from the dataset folder
+   - Evaluation
+      - Contains an evaluation script which computes BERT, BLUERT, ROUGE scores using the test dataset available in the datasets folder.
 
 ## License
-
-
 
 ## Acknowledgments
 
